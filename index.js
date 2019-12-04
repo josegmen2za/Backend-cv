@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://admin:Jg.13754596@curriculum-slh7c.mongodb.net/v
     .then(() => {
         
         console.log('La Conexion a la base de datos se a realizado con exito.');
-        app.set('port',process.env.PORT || 3900); //puerto para  heroku
+        app.set('port',process.env.PORT || 3000); //puerto para  heroku
         //crear servidor
         app.listen(port, ()=> {
             console.log('Servidor corriendo ');
