@@ -4,7 +4,7 @@
   "description": "Api Restfull swl Master en Frameworks para JS",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jose Mendoza",
