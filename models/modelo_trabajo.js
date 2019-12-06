@@ -11,7 +11,6 @@ var TrabajosRealizados = Schema({
     jefe: String,
     telefono: String,
     responsabilidad: String,
-    duracion: String,
     logros: String,
     image: String
 });
