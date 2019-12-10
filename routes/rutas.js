@@ -40,8 +40,8 @@ router.post('/savetrabajo', TrabajosRealizadosController.saveTrabajo);
 router.get('/trabajos/:last?', TrabajosRealizadosController.getTrabajos);
 router.get('/trabajo/:id', TrabajosRealizadosController.getTrabajo);
 router.put('/trabajo/:id', TrabajosRealizadosController.updateTrabajo);
-router.delete('/trabajos/:id', TrabajosRealizadosController.deleteTrabajo);
-router.post('/trabajos/upload-imagen/:id?', md_upload, TrabajosRealizadosController.updateTrabajo);
+router.delete('/trabajo/:id', TrabajosRealizadosController.deleteTrabajo);
+router.post('/trabajos/upload-imagen/:id?', md_upload, TrabajosRealizadosController.uploadImgTrabajo);
 router.get('/trabajos/get-image/:image', TrabajosRealizadosController.getImageTrabajo);
 router.get('/trabajos/search/:search',TrabajosRealizadosController.searchTrabajo);
 
