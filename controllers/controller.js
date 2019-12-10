@@ -260,10 +260,10 @@ var controller = {
 
         // Conseguir nombre y la extensión del archivo
         var file_path = req.files.file0.path;
-        var file_split = file_path.split('\\');
+        /* var file_split = file_path.split('\\'); */
 
         // * ADVERTENCIA * EN LINUX O MAC
-        // var file_split = file_path.split('/');
+         var file_split = file_path.split('/');
 
         // Nombre del archivo
         var file_name = file_split[2];
@@ -317,7 +317,7 @@ var controller = {
     getImagePersona: (req, res) => {
         var file = req.params.image;
         var path_file = './upload/imagenes/'+ file;
-
+        console.log(path_file) 
         fs.exists(path_file, (exists) => {
             if(exists){
                 return res.sendFile(path.resolve(path_file));

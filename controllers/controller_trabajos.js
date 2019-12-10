@@ -300,8 +300,8 @@ var TrabajosRealizadosController = {
 
     getImageTrabajo: (req, res) => {
         var file = req.params.image;
-        var path_file = './upload/imagenes'+ file;
-
+        var path_file = './upload/imagenes/'+ file;
+        console.log(path_file)        
         fs.exists(path_file, (exists) => {
             if(exists){
                 return res.sendFile(path.resolve(path_file));
