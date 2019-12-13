@@ -15,5 +15,5 @@ var TrabajosRealizados = Schema({
     image: String
 });
 
-module.exports = mongoose.model('Trabajos', TrabajosRealizados);
+module.exports = mongoose.model('Trabajo', TrabajosRealizados);
 //pluraliza el nombre Article y lo pone en minuscula articles --> guarda documentos de este tipo y con esta estructura dentro de la coleccion
