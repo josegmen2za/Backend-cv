@@ -129,8 +129,8 @@ var TrabajosRealizadosController = {
                 message: 'No existe el articulo'
             }); 
         }
-        //Buscar el articulo
-        trabajorealizados.findById(trabajorealizadosId, (err, trabajosrealizados) => {
+        //Buscar el trabajo
+        TrabajosRealizados.findById(trabajorealizadosId, (err, trabajorealizados) => {
              
             if(err || !trabajorealizados){
                 return res.status(404).send({
