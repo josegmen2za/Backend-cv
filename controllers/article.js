@@ -261,35 +261,34 @@ var controller = {
             });
         
         }else{
-             // Si todo es valido, sacando id de la url
-             var articleId = req.params.id;
-             
+            // Si todo es valido, sacando id de la url
+            var articleId = req.params.id;
 
-             if(articleId){
-                // Buscar el articulo, asignarle el nombre de la imagen y actualizarlo
-                Article.findOneAndUpdate({_id: articleId}, {image: file_name}, {new:true}, (err, articleUpdated) => {
+            if(articleId){
+               // Buscar el articulo, asignarle el nombre de la imagen y actualizarlo
+               Article.findOneAndUpdate({_id: articleId}, {image: file_name}, {new:true}, (err, articleUpdated) => {
 
-                    if(err || !articleUpdated){
-                        return res.status(200).send({
-                            status: 'error',
-                            message: 'Error al guardar la imagen de articulo !!!'
-                        });
-                    }
+                   if(err || !articleUpdated){
+                       return res.status(404).send({
+                           status: 'error',
+                           message: 'Error al guardar la imagen de articulo !!!'
+                       });
+                   }
 
-                    return res.status(200).send({
-                        status: 'success',
-                        article: articleUpdated
-                    });
-                });
-             }else{
-                return res.status(200).send({
-                    status: 'success',
-                    image: file_name
-                });
-             }
-            
-        }   
-    }, // end upload file
+                   return res.status(200).send({
+                       status: 'success',
+                       article: articleUpdated
+                   });
+               });
+            }else{
+               return res.status(200).send({
+                   status: 'success',
+                   image: file_name
+               });
+            }
+           
+       }   
+   }, // end upload file
 
     getImage: (req, res) => {
         var file = req.params.image;
