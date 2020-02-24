@@ -267,7 +267,7 @@ var controller = {
             if(articleId){
                // Buscar el articulo, asignarle el nombre de la imagen y actualizarlo
                Article.findOneAndUpdate({_id: articleId}, {image: file_name}, {new:true}, (err, articleUpdated) => {
-
+                    console.log(file_name);
                    if(err || !articleUpdated){
                        return res.status(404).send({
                            status: 'error',
